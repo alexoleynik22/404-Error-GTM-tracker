@@ -1,0 +1,275 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2024-12-18 17:27:45",
+    "containerVersion": {
+        "path": "accounts/29893346543/containers/88758453/versions/0",
+        "accountId": "29893346543",
+        "containerId": "88758453",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/29893346543/containers/88758453",
+            "accountId": "29893346543",
+            "containerId": "88758453",
+            "name": "www.example.com",
+            "publicId": "GTM-XXXXXX",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1572971003331",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/2989334654/containers/88758453/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-XXXXXX"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "29893346543",
+                "containerId": "88758453",
+                "tagId": "145",
+                "name": "404 Error Checker",
+                "type": "img",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useCacheBuster",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "url",
+                        "value": "https://script.google.com/macros/s/sdfsdfsdfsdfsdfbxloI4NZdsWbofI0vRxJcGtR-N68j59nUAHiP7fXcox1gGvUpp-DX861f2zNUFjYDX5/exec?url={{Page URL}}&hostname={{Page Hostname}}&Referrer={{Referrer}}&utm_source={{utm_source}}&utm_medium={{utm_medium}}&utm_campaign={{utm_campaign}}&utm_term={{utm_term}}&utm_content={{utm_content}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "cacheBusterQueryParam",
+                        "value": "gtmcb"
+                    }
+                ],
+                "fingerprint": "1731464290974",
+                "firingTriggerId": [
+                    "125"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "29893346543",
+                "containerId": "88758453",
+                "triggerId": "125",
+                "name": "404 Page Trigger",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Title}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "\\b(404|not found|page missing|oops|error|page isn't available)\\b"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "ignore_case",
+                                "value": "true"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page Hostname}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "gtm-msr.appspot.com"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1731515356558"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "29893346543",
+                "containerId": "88758453",
+                "variableId": "127",
+                "name": "Title",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "document.title"
+                    }
+                ],
+                "fingerprint": "1613530626842",
+                "formatValue": {}
+            },
+            {
+                "accountId": "29893346543",
+                "containerId": "88758453",
+                "variableId": "162",
+                "name": "utm_source",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "QUERY"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "queryKey",
+                        "value": "utm_source"
+                    }
+                ],
+                "fingerprint": "1731126527463",
+                "formatValue": {}
+            },
+            {
+                "accountId": "29893346543",
+                "containerId": "88758453",
+                "variableId": "163",
+                "name": "utm_medium",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "QUERY"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "queryKey",
+                        "value": "utm_medium"
+                    }
+                ],
+                "fingerprint": "1731126548245",
+                "formatValue": {}
+            },
+            {
+                "accountId": "29893346543",
+                "containerId": "88758453",
+                "variableId": "164",
+                "name": "utm_campaign",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "QUERY"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "queryKey",
+                        "value": "utm_campaign"
+                    }
+                ],
+                "fingerprint": "1731126568765",
+                "formatValue": {}
+            },
+            {
+                "accountId": "29893346543",
+                "containerId": "88758453",
+                "variableId": "165",
+                "name": "utm_term",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "QUERY"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "queryKey",
+                        "value": "utm_term"
+                    }
+                ],
+                "fingerprint": "1731126599278",
+                "formatValue": {}
+            },
+            {
+                "accountId": "29893346543",
+                "containerId": "88758453",
+                "variableId": "166",
+                "name": "utm_content",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "QUERY"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "queryKey",
+                        "value": "utm_content"
+                    }
+                ],
+                "fingerprint": "1731126618422",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "29893346543",
+                "containerId": "88758453",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "29893346543",
+                "containerId": "88758453",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "29893346543",
+                "containerId": "88758453",
+                "type": "REFERRER",
+                "name": "Referrer"
+            }
+        ],
+        "fingerprint": "1734542865824",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/29893346543/containers/88758453/versions/0?apiLink=version"
+    }
+}
